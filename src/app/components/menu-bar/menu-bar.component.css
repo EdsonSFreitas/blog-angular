@@ -1,3 +1,13 @@
-*{
-  color: aqua;
+.container--menu-bar{
+  font-size: 20px;
+}
+
+.container--menu-bar > ul{
+  display: flex;
+  flex-direction: row;
+}
+
+.container--menu-bar > ul > li{
+  margin-right: 30px;
+  list-style: none
 }
