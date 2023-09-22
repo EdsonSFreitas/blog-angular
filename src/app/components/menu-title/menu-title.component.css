@@ -7,7 +7,6 @@
   display: flex;
   justify-content: center;
   font-size: 150px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .container--menu-title > hr{
