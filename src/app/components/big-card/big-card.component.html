@@ -1,7 +1,7 @@
 <div class="container--big-card">
   <div class="big-card__picture">
     <img
-      src="https://res.cloudinary.com/practicaldev/image/fetch/s--7q3tE-xl--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/i/qyix6eyhrnc8x9c44yp2.jpg"
+      src="{{ pictureCover }}"
       height="200px"
       alt=""
       srcset=""
@@ -9,19 +9,14 @@
   </div>
 
   <div class="big-card__title">
-    <h1><a href="#">Nova versão do Angular Framework!</a></h1>
+    <h1><a href="#">{{ cardTitle }}</a></h1>
   </div>
 
   <div class="big-card__description">
     <p>
       <a>
-        Angular é um framework de desenvolvimento web de código aberto que
-        permite criar aplicativos de página única e escaláveis com JavaScript e
-        TypeScript. Ele fornece uma arquitetura robusta e um conjunto abrangente
-        de recursos para facilitar o desenvolvimento e a manutenção de
-        aplicativos web modernos.
+        {{ cardDescription}}
       </a>
     </p>
-    <!-- <p>Angular é um framework de desenvolvimento web de código aberto.</p> -->
   </div>
 </div>

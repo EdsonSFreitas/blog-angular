@@ -1,0 +1,30 @@
+@media screen and (max-width:600px) {
+.container--big-card{
+width: 150px;
+height: 250px;
+border-radius: 5px;
+margin-left: 20px;
+margin-right: 20px;
+
+}
+
+.big-card__picture img {
+  width: 200px;
+  min-width: 200px;
+  margin-right: 20px;
+}
+
+.big-card__title > h1{
+  font-size: 20px;
+  margin-top: 15px;
+}
+
+.big-card__description > p > a{
+  font-size: 17px;
+  color: gray;
+}
+
+.big-card__description {
+  margin-top: 10px
+}
+}

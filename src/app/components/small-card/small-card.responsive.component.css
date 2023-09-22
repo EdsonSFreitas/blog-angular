@@ -1,0 +1,17 @@
+@media screen and (max-width: 600px) {
+  .container--small-card {
+    width: 150px;
+    font-size: 8px;
+  }
+
+  .small-card__picture > img {
+    width: 145px;
+    height: auto;
+    min-width: 20px;
+  }
+
+  .container--small-card-content{
+    display: flex;
+    flex-direction: column;
+  }
+}
