@@ -1,21 +1,39 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { dataFake } from 'src/app/data/dataFake';
 
 @Component({
   selector: 'app-content',
   templateUrl: './content.component.html',
-  styleUrls: ['./content.component.css']
+  styleUrls: ['./content.component.css'],
 })
 export class ContentComponent implements OnInit {
   @Input()
-  pictureCover:string = "https://res.cloudinary.com/practicaldev/image/fetch/s--7q3tE-xl--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/i/qyix6eyhrnc8x9c44yp2.jpg";
+  pictureCover: string ="";
   @Input()
-  contentTitle:string = "Titulo da noticia";
+  contentTitle: string = "";
   @Input()
-  contentDescription:string = "Descricao da noticia no Content";
+  contentDescription: string = "";
+
+  private id: string | null = '0';
+
+  constructor(private route: ActivatedRoute) {}
 
   ngOnInit(): void {
-    throw new Error('Method not implemented.');
+    this.route.paramMap.subscribe((params) => {
+      this.id = params.get('id');
+    });
+
+    this.setValuesToComponent(this.id);
   }
 
+  setValuesToComponent(id: string | null) {
+    const result = dataFake.filter((article) => article.id == this.id)[0];
 
+    if (result != null) {
+      this.contentTitle = result.title;
+      this.contentDescription = result.description;
+      this.pictureCover = result.photo;
+    }
+  }
 }
