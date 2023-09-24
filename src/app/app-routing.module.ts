@@ -6,16 +6,17 @@ import { ContentComponent } from './pages/content/content.component';
 const routes: Routes = [
   {
     path: '',
-    component: HomeComponent
+    component: HomeComponent,
   },
   {
     path: 'content/:id',
-    component: ContentComponent
-  }
+    component: ContentComponent,
+  },
+  { path: '**', redirectTo: '' },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
